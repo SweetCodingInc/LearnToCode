@@ -13,8 +13,7 @@
     "server:build": "tsc -p ./server",
     "server:run": "nodemon ./server/dist",
     "start": "npm run server:build && concurrently -k \"npm run server:compile\" \"npm run server:run\" \"npm run client\"",
-    "prestart": "npm install",
-    "tsc:init": "tsc --init"
+    "prestart": "npm install"
   },
   "private": true,
   "dependencies": {
