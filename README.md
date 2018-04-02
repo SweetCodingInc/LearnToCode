@@ -32,7 +32,7 @@ Please read our [Contribution Guidlines](https://github.com/SweetCodingInc/Learn
 
 * **[SweetCodingInc](https://github.com/SweetCodingInc)** - That indian guy
 * **[Knochenmark](https://github.com/Knochenmark)** - That german guy
-* **[mbosnjak01](https://github.com/mbosnjak01)** - That croation guy
+* **[mbosnjak01](https://github.com/mbosnjak01)** - That croatian guy
 * **[Codevotee](https://github.com/Codevotee)** - That british guy
 ## License
 
