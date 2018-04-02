@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Integrations
-[![Waffle.io - Issues in progress](https://badge.waffle.io/SweetCodingInc/LearnToCode.svg?columns=Input,To%20Do,In%20Progress,Done)](http://waffle.io/SweetCodingInc/LearnToCode)
+[![Waffle.io - Issues in progress](https://badge.waffle.io/SweetCodingInc/LearnToCode.svg?columns=Inbox,To%20Do,In%20Progress,Done)](http://waffle.io/SweetCodingInc/LearnToCode)
 
 ## Prerequisites
 
