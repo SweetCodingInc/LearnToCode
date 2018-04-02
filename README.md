@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+## Integrations
+[![Waffle.io - Issues in progress](https://badge.waffle.io/SweetCodingInc/LearnToCode.png?label=in%20progress&title=In%20Progress)](http://waffle.io/SweetCodingInc/LearnToCode)
+
 ## Prerequisites
 
 Node 6.10+
