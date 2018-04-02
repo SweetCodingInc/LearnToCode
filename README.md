@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+## Prerequisites
+
+Node 6.10+
+Npm 3.10+ 
+
+(In case, you're on windows and do not have administrator right and/or have McAffee antivirus installed, make sure you do not have npm v above 5.0.3)
+
+Angular CLI v1.7.3
+Install it using `npm install -g @angular/cli`
+
 ## Get Started
 - Fork this repo
 - git clone `https://github.com/<YOUR_GITHUB_USERNAME>/LearnToCode.git`
