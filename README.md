@@ -36,4 +36,4 @@ Please read our [Contribution Guidlines](https://github.com/SweetCodingInc/Learn
 * **[Codevotee](https://github.com/Codevotee)** - That british guy
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/SweetCodingInc/HubEditor/blob/master/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/SweetCodingInc/LearnToCode/blob/master/LICENSE) file for details
