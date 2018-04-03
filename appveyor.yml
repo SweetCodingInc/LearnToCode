@@ -16,6 +16,8 @@ test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
+  # To be enabled later
+  #- npm test
 
 build_script:
 - cmd: npm start
