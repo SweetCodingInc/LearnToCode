@@ -19,9 +19,9 @@ Install it using `npm install -g @angular/cli`
 - Fork this repo
 - git clone `https://github.com/<YOUR_GITHUB_USERNAME>/LearnToCode.git`
 - cd LearnToCode
-- npm start
+- npm run dev
 
-When you run `npm start` for the first time, it will take some time as it will internally trigger `npm install`.
+When you run `npm run dev` for the first time, it will take some time as it will internally trigger `npm install`.
 Once packages are installed, it will start a live development server.
 
 ## Contributing
