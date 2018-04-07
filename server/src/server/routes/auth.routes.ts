@@ -5,7 +5,14 @@ import { defer, Promise } from 'q';
 import { IAuthResponse } from '../models/auth.model';
 import { IUser } from '../models/user.model';
 import { UserModel } from '../db/models/user.model';
-
+/**
+ * User authentication method
+ * Called inside API /login route
+ * 
+ * @param {string} username 
+ * @param {string} password 
+ * @returns {Promise<IAuthResponse>} 
+ */
 function login(username: string, password: string): Promise<IAuthResponse> {
     const deferred = defer();
     UserModel.findOne({ username })
@@ -28,7 +35,13 @@ function login(username: string, password: string): Promise<IAuthResponse> {
         });
     return <Promise<IAuthResponse>>deferred.promise;
 }
-
+/**
+ * Method to register user
+ * Using IUser model 
+ * 
+ * @param {IUser} user 
+ * @returns {Promise<IUser>} 
+ */
 function register(user: IUser): Promise<IUser> {
     const deferred = defer();
 
@@ -43,7 +56,13 @@ function register(user: IUser): Promise<IUser> {
 
     return <Promise<IUser>>deferred.promise;
 }
-
+/**
+ * API to authenticate user to the application
+ * 
+ * @param {string} endpoint /login
+ * @param {string} method /GET
+ * @param {string} requestQuery - {username: string, password: string}
+ */
 router.get('/login', (req: Request, res: Response, next: Next) => {
     const { username, password } = req.query;
     login(username, password)

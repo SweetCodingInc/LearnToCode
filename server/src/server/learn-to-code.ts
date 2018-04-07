@@ -6,7 +6,12 @@ import { authRouter } from './routes/auth.routes';
 import { DBConnector } from './db/db';
 
 import { Promise, defer } from 'q';
-
+/**
+ * Server configuration class
+ * 
+ * @export
+ * @class LearnToCode
+ */
 export class LearnToCode {
     private _server: Server;
     private serverOpts: ServerOptions = {};
