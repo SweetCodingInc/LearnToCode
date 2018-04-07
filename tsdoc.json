@@ -1,0 +1,11 @@
+{
+    "tsdoc": {
+        "source": "server/src/",
+        "destination": "./docs",
+        "systemName": "LearnToCode",
+        "footer": "SyntPrac",
+        "copyright": "SyntPrac",
+        "outputSourceFiles": "false",
+        "commentsOnly": "true"
+    }
+}
