@@ -10,7 +10,10 @@ const UserSchema = new Schema({
     username: requiredString,
     password: requiredString,
     createdOn: Date,
-    modifiedOn: Date,
+    modifiedOn: {
+        type: Date,
+        default: ''
+    },
     firstName: requiredString,
     lastName: requiredString,
     email: {
