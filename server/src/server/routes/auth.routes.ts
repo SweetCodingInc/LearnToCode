@@ -65,19 +65,18 @@ router.get('/login', (req: Request, res: Response, next: Next) => {
  */
 router.post('/register', (req: Request, res: Response, next: Next) => {
     const data = req.body;
-    if(data)
-    {
+    if (data) {
         data.createdOn = new Date().getTime();
         register(data)
-        .then((user: IUser) => {
-            res.json(user);
-        })
-        .catch((error: any) => {
-            res.status(500);
-            res.json(error);
-        })
+            .then((user: IUser) => {
+                res.json(user);
+            })
+            .catch((error: any) => {
+                res.status(500);
+                res.json(error);
+            })
     }
-    else{
+    else {
         res.status(422) // unprocessable entity
         res.json({
             'message': 'Request body was not present'
