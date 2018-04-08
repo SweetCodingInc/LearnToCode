@@ -3,7 +3,7 @@
 This project aims to provide a platform to teach basic programming.
 
 ## Integrations
-[![Waffle.io - Issues in progress](https://badge.waffle.io/SweetCodingInc/LearnToCode.svg?columns=Inbox,To%20Do,In%20Progress,Done)](http://waffle.io/SweetCodingInc/LearnToCode)
+[![Waffle.io - Issues in progress](https://badge.waffle.io/SyntPrac/LearnToCode.svg?columns=Inbox,To%20Do,In%20Progress,Done)](http://waffle.io/SyntPrac/LearnToCode)
 
 ## Prerequisites
 
