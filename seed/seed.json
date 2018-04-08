@@ -1,0 +1,36 @@
+{
+    "collections": [
+        {
+            "name": "users",
+            "models": [
+                {
+                    "username": "l2cbot",
+                    "firstName": "LearnToCode",
+                    "lastName": "Bot",
+                    "password": "l2cbot33",
+                    "createdOn": "",
+                    "modifiedOn": "",
+                    "email": "l2cbot@learntocode.com"
+                },
+                {
+                    "username": "knochenmark",
+                    "firstName": "Mark",
+                    "lastName": "Todd",
+                    "password": "german-sausage",
+                    "createdOn": "",
+                    "modifiedOn": "",
+                    "email": "knochenmark@learntocode.com"
+                },
+                {
+                    "username": "sprinting",
+                    "firstName": "Kartik",
+                    "lastName": "Mudgal",
+                    "password": "car-thick",
+                    "createdOn": "",
+                    "modifiedOn": "",
+                    "email": "sprinting@learntocode.com"
+                }
+            ]
+        }
+    ]
+}
