@@ -65,15 +65,23 @@ router.get('/login', (req: Request, res: Response, next: Next) => {
  */
 router.post('/register', (req: Request, res: Response, next: Next) => {
     const data = req.body;
-    data.createdOn = new Date().getTime();
-    register(data)
-        .then((user: any) => {
-            res.json(user);
+    if (data) {
+        data.createdOn = new Date().getTime();
+        register(data)
+            .then((user: IUser) => {
+                res.json(user);
+            })
+            .catch((error: any) => {
+                res.status(500);
+                res.json(error);
+            })
+    }
+    else {
+        res.status(422) // unprocessable entity
+        res.json({
+            'message': 'Request body was not present'
         })
-        .catch((error: any) => {
-            res.status(500);
-            res.json(error);
-        });
+    }
 });
 
 export const authRouter = router;
