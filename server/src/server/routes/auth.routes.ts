@@ -15,6 +15,7 @@ import { UserModel } from '../db/models/user.model';
  */
 function login(username: string, password: string): Promise<IAuthResponse> {
     const deferred = defer();
+    console.log(username, password);
     UserModel.findOne({ username })
         .then((model: any) => {
             if (model && model.password === password) {
