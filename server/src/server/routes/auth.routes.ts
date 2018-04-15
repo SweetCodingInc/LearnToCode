@@ -8,16 +8,16 @@ import { UserModel } from '../db/models/user.model';
 /**
  * User authentication method
  * Called inside API /login route
- * 
- * @param {string} username 
- * @param {string} password 
- * @returns {Promise<IAuthResponse>} 
+ *
+ * @param {string} username
+ * @param {string} password
+ * @returns {Promise<IAuthResponse>}
  */
 function login(username: string, password: string): Promise<IAuthResponse> {
     const deferred = defer();
     UserModel.findOne({ username })
         .then((model: any) => {
-            if (model.password === password) {
+            if (model && model.password === password) {
                 model.success = true;
                 model.error = undefined;
                 deferred.resolve(model);
@@ -37,10 +37,10 @@ function login(username: string, password: string): Promise<IAuthResponse> {
 }
 /**
  * Method to register user
- * Using IUser model 
- * 
- * @param {IUser} user 
- * @returns {Promise<IUser>} 
+ * Using IUser model
+ *
+ * @param {IUser} user
+ * @returns {Promise<IUser>}
  */
 function register(user: IUser): Promise<IUser> {
     const deferred = defer();
@@ -58,7 +58,7 @@ function register(user: IUser): Promise<IUser> {
 }
 /**
  * API to authenticate user to the application
- * 
+ *
  * @param {string} endpoint /login
  * @param {string} method /GET
  * @param {string} requestQuery - {username: string, password: string}
@@ -93,13 +93,12 @@ router.post('/register', (req: Request, res: Response, next: Next) => {
             .catch((error: any) => {
                 res.status(500);
                 res.json(error);
-            })
-    }
-    else {
-        res.status(422) // unprocessable entity
+            });
+    } else {
+        res.status(422); // unprocessable entity
         res.json({
             'message': 'Request body was not present'
-        })
+        });
     }
 });
 
