@@ -1,5 +1,11 @@
 import { IUser } from './user.model';
+
 export interface IAuthResponse extends IUser {
     success: boolean;
-    error: any;
+    message: any;
+}
+
+export interface IAuthRequest {
+    username: string;
+    password: string;
 }
