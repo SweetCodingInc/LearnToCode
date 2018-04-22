@@ -12,7 +12,7 @@ import { LoginStartAction } from '../../store/actions/auth.actions';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css', './login.component.utilities.css']
+  styleUrls: ['./login.component.styl', './login.component.utilities.styl']
 })
 
 export class LoginComponent implements OnInit {
