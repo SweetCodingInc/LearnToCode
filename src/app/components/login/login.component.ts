@@ -12,8 +12,9 @@ import { LoginStartAction } from '../../store/actions/auth.actions';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css', './login.component.utilities.css']
 })
+
 export class LoginComponent implements OnInit {
   @HostBinding('class')
   className = 'f c';

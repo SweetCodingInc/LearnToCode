@@ -1,4 +1,4 @@
-<div class="f c center-all bg-dark">
+<!--<div class="f c center-all animated-backgroud-gradient">
   <div class="login-form-container">
     <div class="alert alert-danger" role="alert" *ngIf="authState.error">
       {{ authState.error.error.message}}
@@ -22,5 +22,92 @@
         </div>
       </div>
     </form>
+  </div>
+</div>-->
+
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="f c center-all animated-backgroud-gradient">
+  <div class="interface-wrapper">
+
+    <div class="left-panel"></div>
+
+    <div class="right-panel">
+
+      <div class="right-panel-grid-wrapper">
+
+        <div class="grid-row-1"> <!-- Start of GR1 -->
+
+          <div class="peach-gradient">        
+              <div class="header">
+                  <h3 class="login-t mb-4 pt-4">Sign in</h3>
+              </div>
+              <div class="alert alert-danger alert-c" role="alert" *ngIf="authState.error">
+                  {{ authState.error.error.message}}Wrong username or password
+              </div>
+          </div>
+
+        </div> <!-- End of GR1 -->
+
+        <div class="grid-row-2"> <!-- Start of GR2 -->
+          <form [formGroup]="loginForm">
+          <div class="text-center">       
+              <div class="">
+                  <input type="text" id="Form-email3" class="form-control" placeholder="Your username" formControlName="username">                    
+              </div>
+              <br>
+              <div class="md-form pb-1 pb-md-3">
+                  <input type="password" id="Form-pass3" class="form-control" placeholder="Your password" formControlName="password">
+              </div>
+              <div class="mx-4 mt-4">                                   
+                  <p class=""><a href="#" class="">Forgot  Password?</a></p>
+                  <div class="login-box">
+                    <button class="btn login-btn" (click)="login()" [disabled]="loginForm.status !== 'VALID' || authState.active"><span>Sign in</span></button>
+                  </div>                 
+              </div>
+          </div>
+        </form>
+        </div> <!-- End of GR2 -->
+
+        <div class="grid-row-3"> <!-- Start of GR3 -->
+          <div class="buttons-row">
+              
+              <a class="btn btn-social btn-github color-white">
+                <span class="fa fa-github"></span>                   
+              </a>
+              
+              <a class="btn btn-social btn-bitbucket color-white">
+                  <span class="fa fa-bitbucket"></span>                   
+                </a> 
+                           
+              <a class="btn btn-social btn-google color-white">
+                <span class="fa fa-google"></span>                    
+              </a>
+              
+              <a class="btn btn-social btn-facebook color-white">
+                  <span class="fa fa-facebook"></span>                    
+              </a>
+
+              <a class="btn btn-social btn-twitter color-white">
+                  <span class="fa fa-twitter"></span>                    
+              </a>
+            </div>
+        </div> <!-- End of GR3 -->
+
+        <div class="grid-row-4"> <!-- Start of GR4-->
+          
+          <div class="signup mt--4">
+            Don't have an account?
+            <div class="mt-2">
+                <button class="btn signup-btn"><span>Register</span></button>
+              </div> 
+          </div>
+         
+        </div> <!-- End of GR4 -->
+
+      </div> <!-- End of right panel grid wrapper -->
+                
+    </div> <!-- End of right panel -->
+
   </div>
 </div>
