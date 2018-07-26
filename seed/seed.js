@@ -1,9 +1,12 @@
+const { config } = require('dotenv');
 const mongoose = require('mongoose');
 const seedData = require('./seed.json');
 const UserModel = require('./schema/user.schema');
 const q = require('q');
 
-const CONN_STRING = 'mongodb://localhost:27017/learntocode';
+config();
+
+const CONN_STRING = `${process.env.DB_HOST}/${process.env.DB_NAME}`;
 
 function deleteAllCollections() {
     const deferred = q.defer();

@@ -17,6 +17,7 @@ import { reducers } from './store';
 import { AuthStateEffects } from './store/effects/auth.effects';
 
 import { routes } from './app.routes';
+import { MonacoEditorModule } from 'ngx-monaco-editor';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { routes } from './app.routes';
     HttpClientModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([AuthStateEffects])
+    EffectsModule.forRoot([AuthStateEffects]),
+    MonacoEditorModule.forRoot()
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

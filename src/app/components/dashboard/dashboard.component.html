@@ -1,3 +1,28 @@
-<p>
-  dashboard works!
-</p>
+<div class="f c">
+    <div class="f r">
+        <div class="f c">
+            Write a C program that prints "Hello, World!"
+        </div>
+        <div class="f c">
+            <div>
+                <button (click)="run()">Run</button>
+            </div>
+            <div class="f c">
+                <ngx-monaco-editor style="height:100%;" [options]="editorOptions" [(ngModel)]="code">
+                </ngx-monaco-editor>
+            </div>
+        </div>
+    </div>
+    <div class="f r">
+        <div class="f c">Test Cases</div>
+        <div class="f c">
+            <h5>Stdout</h5>
+            <div *ngIf="stdout">{{ stdout }}</div>
+            <div *ngIf="stderr">
+                <ul style="list-style-type: none;">
+                    <li *ngFor="let line of stderr.split('\n')">{{line}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
