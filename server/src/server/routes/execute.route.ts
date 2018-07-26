@@ -17,7 +17,7 @@ function execute(req: Request, res: Response, next: Next) {
     const { language, code } = <IExecution>req.body;
 
     const URL = `https://run.glot.io/languages/${language}/latest`;
-    const TOKEN = `Token ${process.env.COMPILER_API_TOKEN}`;
+    const TOKEN = `${process.env.COMPILER_API_TOKEN}`;
     const TYPE = 'application/json';
 
     const REQUEST_HEADERS = {
@@ -38,9 +38,11 @@ function execute(req: Request, res: Response, next: Next) {
 
     axios.post(URL, REQUEST_BODY, REQUEST_HEADERS)
         .then(response => {
+            console.log(response);
             res.json(response.data);
         })
         .catch(error => {
+            console.log(error);
             res.status(500);
             res.send(error.data);
         });
