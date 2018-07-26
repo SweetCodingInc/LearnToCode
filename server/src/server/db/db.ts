@@ -2,16 +2,13 @@ import { connect, Mongoose, connection } from 'mongoose';
 import { Promise, defer } from 'q';
 
 export class DBConnector {
-    private host = 'mongodb://localhost:27017';
-    private db = 'learntocode';
-
-    constructor() {
-    }
+    private host = process.env.DB_HOST;
+    private db = process.env.DB_NAME;
+    private CONN_STRING = `${this.host}/${this.db}`;
 
     connect(): Promise<boolean> {
         const deferred = defer();
-        const url = `${this.host}/${this.db}`;
-        connect(url)
+        connect(this.CONN_STRING)
             .then(deferred.resolve)
             .catch(deferred.reject);
 

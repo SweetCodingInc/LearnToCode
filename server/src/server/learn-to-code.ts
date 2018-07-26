@@ -1,14 +1,14 @@
 import { Server, ServerOptions, createServer, plugins } from 'restify';
 import * as corsMiddleware from 'restify-cors-middleware';
 
-import { authRouter } from './routes/auth.routes';
+import { router } from './routes';
 
 import { DBConnector } from './db/db';
 
 import { Promise, defer } from 'q';
 /**
  * Server configuration class
- * 
+ *
  * @export
  * @class LearnToCode
  */
@@ -37,7 +37,7 @@ export class LearnToCode {
         this._server.use(plugins.queryParser());
         this._server.use(this.corsConfig.actual);
 
-        authRouter.applyRoutes(this._server);
+        router.applyRoutes(this._server);
 
         return this;
     }
